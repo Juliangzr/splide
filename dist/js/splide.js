@@ -2179,10 +2179,10 @@ var UID_NAME = 'uid';
    * Note that IE doesn't support padStart() to fill the uid by 0.
    */
 
-  if (!root.id) {
-    window.splide = window.splide || {};
-    var uid = window.splide[UID_NAME] || 0;
-    window.splide[UID_NAME] = ++uid;
+	if (!root.id) {
+    global.splide = global.splide || {};
+    var uid = global.splide[UID_NAME] || 0;
+    global.splide[UID_NAME] = ++uid;
     root.id = "splide" + pad(uid);
   }
   /**
@@ -5854,6 +5854,6 @@ var complete_Splide = /*#__PURE__*/function (_Core) {
   return Splide;
 }(Splide); // Register the class as a global variable for non-ES6 environment.
 
-window.Splide = complete_Splide;
+global.Splide = complete_Splide;
 /******/ })()
 ;
